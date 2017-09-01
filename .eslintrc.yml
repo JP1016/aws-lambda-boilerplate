@@ -1,0 +1,63 @@
+env:
+  node: true
+  es6: true
+extends:
+  - 'eslint:recommended'
+  - 'plugin:import/errors'
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+  sourceType: module
+plugins:
+  - import
+  - mocha
+rules:
+  indent:
+    - error
+    - tab
+    - VariableDeclarator: 0
+      ObjectExpression: first
+      CallExpression:
+        arguments: first
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  no-mixed-spaces-and-tabs:
+    - error
+    - smart-tabs
+  no-unused-vars:
+    - error
+    - ignoreRestSiblings: true
+      argsIgnorePattern: "^_[0-9]*"
+      memberExpression: false
+  no-use-before-define:
+    - error
+    - functions: false
+  max-len:
+    - error
+    - code: 79
+      tabWidth: 2
+      ignorePattern: "} from "
+  object-property-newline:
+    - error
+    - allowMultiplePropertiesPerLine: true
+  arrow-parens:
+    - error
+    - as-needed
+  mocha/no-exclusive-tests:
+    - error
+  mocha/no-global-tests:
+    - error
+  mocha/no-identical-title:
+    - error
+  mocha/no-nested-tests:
+    - error
+  mocha/no-skipped-tests:
+    - error

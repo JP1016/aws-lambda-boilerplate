@@ -1,0 +1,38 @@
+{
+  "name": "lets-talk-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --compilers js:babel-core/register ./test/",
+    "build": "webpack",
+    "lint": "eslint ./lib/ ./test/",
+    "lintfix": "eslint ./lib/ ./test/ --fix",
+    "cover": "istanbul cover ./node_modules/.bin/_mocha -- --recursive --compilers js:babel-core/register ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechnoVenturesInc/lets-talk-lambda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechnoVenturesInc/lets-talk-lambda/issues"
+  },
+  "homepage": "https://github.com/TechnoVenturesInc/lets-talk-lambda#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.5.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^3.5.0",
+    "webpack": "^3.5.5"
+  }
+}
